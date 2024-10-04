@@ -1,0 +1,17 @@
+CREATE DATABASE SchoolDB;
+
+USE SchoolDB;
+
+CREATE TABLE Students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    grade VARCHAR(10),
+    fees_due DECIMAL(10, 2)
+);
+
+CREATE TABLE Staff (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    position VARCHAR(100)
+);
+SELECT * FROM Students;

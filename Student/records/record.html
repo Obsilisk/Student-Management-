@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Management</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #007bff, #6c757d); /* Add a gradient background */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        form {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto; /* Center the form */
+        }
+
+        label, input[type="text"], input[type="submit"] {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Centering the content */
+        .content {
+            text-align: center;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            form {
+                width: 90%; /* Make forms more responsive */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Create and Manage Certificates</h1>
+
+        <!-- Form to Create Certificate -->
+        <h2>Create Certificate</h2>
+        <form action="CreateCertificateServlet" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="course">Course:</label>
+            <input type="text" id="course" name="course" required>
+
+            <label for="grade">Grade:</label>
+            <input type="text" id="grade" name="grade" required>
+
+            <input type="submit" value="Create Certificate">
+        </form>
+
+        <!-- Form to View and Download Certificate -->
+        <h2>View Certificate</h2>
+        <form action="ViewCertificateServlet" method="get">
+            <label for="certId">Certificate ID:</label>
+            <input type="text" id="certId" name="certId" required>
+
+            <input type="submit" value="View Certificate">
+        </form>
+    </div>
+
+</body>
+</html>

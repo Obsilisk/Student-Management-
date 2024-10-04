@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #007bff, #6c757d); 
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        /* Styling for links */
+        a {
+            display: block;
+            margin: 15px auto;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #007bff;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: 1px solid #007bff;
+            width: 250px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Center content on the page */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            a {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>School Management System</h1>
+
+        <a href="viewStudents.jsp">View Student Details</a>
+        <a href="viewStaff.jsp">View Staff Details</a>
+        <a href="studentDues.jsp">Check Student Fees Dues</a>
+        <a href="studentRecords.jsp">View Student Records</a>
+    </div>
+</body>
+</html>

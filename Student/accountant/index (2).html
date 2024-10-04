@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Fee Collection and Payment System</h1>
+    
+    <form action="FeeServlet" method="post">
+        <label for="studentId">Student ID:</label>
+        <input type="text" id="studentId" name="studentId" required><br><br>
+
+        <label for="feeDue">Fee Due:</label>
+        <input type="text" id="feeDue" name="feeDue" readonly><br><br>
+
+        <label for="paymentAmount">Payment Amount:</label>
+        <input type="text" id="paymentAmount" name="paymentAmount" required><br><br>
+
+        <button type="submit">Pay Fee</button>
+    </form>
+
+    <h2>Payment History</h2>
+    <div id="paymentHistory">
+        <!-- Payment history will be dynamically populated -->
+    </div>
+
+    <h2>Fee Due</h2>
+    <div id="feeDueView">
+        <!-- Fee due will be dynamically populated -->
+    </div>
+</body>
+</html>
